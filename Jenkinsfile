@@ -22,7 +22,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonarqube-server') {
                     // Optionally use a Maven environment you've configured already
-                    bat 'mvn sonar:sonar'
+                    bat 'mvn sonar:sonar -f ./app/pom.xml'
                 }
             }
         }
